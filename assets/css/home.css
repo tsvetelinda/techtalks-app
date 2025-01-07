@@ -1,0 +1,115 @@
+body {
+    background-image: url('../images/home_background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.welcome-msg {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Orbitron", serif;
+    font-size: 6.5rem;
+    text-shadow: 1px 2px 2px rgba(4, 4, 4, 0.8), 1px 1px 2px rgba(4, 4, 4, 0.9);
+    width: 0;
+    overflow: hidden;
+    border-right: 3px solid #97DFFC;
+    animation: typing 3s steps(20) 1s forwards, blink 3s step-end 1 forwards;
+}
+
+p {
+    font-size: 3rem;
+    color: #76C7E8;
+    text-shadow: 1px 1px 1px rgba(4, 4, 4, 0.8), 1px 1px 1px rgba(255, 255, 255, 0.9);
+    animation: flyIn 1s ease-in-out;
+}
+
+h1, p, .btns-container {
+    position: relative;
+    z-index: 2;
+}
+
+.btns-container {
+    display: flex;
+    gap: 30px;
+    animation: flyIn 1s ease-in-out;
+}
+
+.btns-container a {
+    border: 1px solid #76C7E8;
+    padding: 10px;
+    font-size: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: scale 0.4s ease-in-out, box-shadow 0.4s ease-in, color 0.4s ease-in-out, border 0.4s ease-in-out;
+}
+
+#log-in-btn {
+    padding: 10px 20px;
+}
+
+.btns-container a:hover {
+    scale: 1.2;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 19px 30px, rgba(0, 0, 0, 0.8) 0px 15px 12px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+@keyframes flyIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes blink {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #97DFFC;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+

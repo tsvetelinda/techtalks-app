@@ -1,0 +1,84 @@
+.edit-form-container {
+    padding: 20px;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-form-container h1 {
+    font-family: "Orbitron", serif;
+    font-size: 3rem;
+}
+
+.edit-form-container form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #76C7E8;
+    padding: 25px;
+}
+
+form label {
+    font-size: 2rem;
+    text-align: center;
+}
+
+form textarea {
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #000;
+    border: 1px solid #76C7E8;
+    color: #fff;
+    font-family: "Electrolize", serif;
+    border-radius: 0;
+    transition: border-color 0.4s ease-in-out;
+    height: 200px;
+}
+
+form textarea:focus {
+    border-radius: 0;
+    outline: none;
+    border-color: #fff;
+}
+
+form button {
+    cursor: pointer;
+    border: 1px solid #76C7E8;
+    padding: 10px;
+    font-size: 2rem;
+    background-color: #000;
+    color: #76C7E8;
+    font-family: "Electrolize", serif;
+    transition: scale 0.4s ease-in-out, color 0.4s ease-in-out, border 0.4s ease-in-out;
+}
+
+form button:hover {
+    scale: 0.95;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+textarea::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #76C7E8;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+textarea::-webkit-scrollbar-track {
+    background-color: #323131;
+    border-radius: 5px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #fff;
+}
